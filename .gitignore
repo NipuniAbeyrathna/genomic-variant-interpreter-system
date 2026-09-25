@@ -1,0 +1,44 @@
+# Environment variables - NEVER commit your API keys
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# IDE
+.vscode/
+.idea/
+.DS_Store
+
+data/clinvar_variant_dataset_tfidf_cache.pkl
+
+# Test artifacts
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Build artifacts
+dist/
+build/
+*.egg
+
+# # Analysis notebook outputs
+# analysis_results/
+# .ipynb_checkpoints/
+
+# # Jupyter notebook
+# *.ipynb_checkpoints
+# Local human-review demo records
+data/review_signoffs.json
+
+# ClinVar reference data and enrichment outputs (regenerate with
+# scripts/enrich_clinvar_labels.py rather than committing ~194 MB)
+data/clinvar_GRCh37.vcf.gz
+
+# Coverage-fallback source data (443 MB ClinVar dump + the BRCA index derived
+# from it; rebuild the index with scripts/build_variant_summary_index.py)
+data/variant_summary.txt.gz
+data/clinvar_variant_dataset_enriched_tfidf_cache.pkl
